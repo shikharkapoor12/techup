@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GovConnect: Enhancing Government Connectivity</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="#"></script>
+<style>
+  /* Styling for the form and inputs */
+  .search-form {
+      margin: 20px;
+      padding: 20px;
+      background-color: #f8f8f8;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .search-form input[type="text"], .search-form select {
+      width: calc(80% - 22px);
+      padding: 10px;
+      margin-right: 20px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+  .search-form input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      float: center; /* Aligns the button to the right */
+  }
+  .search-form input[type="submit"]:hover {
+      background-color: #45a049;
+  }
+
+  /* General styling for the container */
+  .button-container {
+            margin: 20px;
+            padding: 20px;
+            text-align: center; /* Centers the buttons */
+        }
+        /* Styling for each button */
+        button {
+            padding: 10px 20px; /* Size of the buttons */
+            margin: 5px; /* Space between buttons */
+            background-color: #4CAF50; /* Background color */
+            color: white; /* Text color */
+            border: none; /* No borders */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Cursor changes to pointer on hover */
+            font-size: 16px; /* Font size */
+        }
+        button:hover {
+            background-color: #45a049; /* Darker shade on hover */
+        }
+/* General styling for the form */
+.form-container {
+            margin: 20px;
+            padding: 20px;
+            background-color: #f8f8f8;
+            color: black;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Styling for each input and textarea */
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        /* Styling for the submit button */
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+</style>
+</head>
+<body class="w3-content" style="max-width:1300px">
+
+<!-- First Grid: Logo & About -->
+<div class="w3-row" id="contact">
+    <div class="w3-half w3-indigo w3-container" style="height:700px">
+      <div class="w3-padding-64">
+        <h1><center>Welcome to GovConnect!</h1></center>
+        <br>
+        <h2><center>GovConnect is your gateway to a more interconnected and informed public sector.</h2></center>
+        <br>
+        <h3>GovConnect enables public officers to quickly identify and collaborate with colleagues who are currently or have previously have managed similar projects.</h3>
+        <br>
+        <h4>Key Features</h4>
+        <li><b>Expertise Search:</b> Utilize a powerful search engine to find public officers based on their current & past projects, and roles.</li>
+        <br>
+        <li><b>Task Publisher:</b> Create and publish your own tasks or projects, enabling other public officers to discover your initiatives and connect with you for collaboration.</li>
+        <br>
+       </div>
+    </div>
+  <div class="w3-half w3-teal w3-container" style="height:700px">
+    <div class="w3-padding-64">
+      <h1><center>Who Uses GovConnect?</h1></center>
+      <br>
+      <h4>Our database contains tasks from the following agencies across the Government:</h4>
+        <div class="w3-container w3-responsive">
+          <table class="w3-table">
+            <tr>
+              <th>Agency</th>
+              <th>Team</th>
+              <th>No. of Tasks</th>
+            </tr>
+            <tr class="w3-white">
+              <td>Agency 1</td>
+              <td>Team 1</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>Agency 2</td>
+              <td>Team 1</td>
+              <td>8</td>
+            </tr>
+            <tr class="w3-white">
+              <td>Agency 3</td>
+              <td>Team 1</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Agency 4</td>
+              <td>Team 1</td>
+              <td>6</td>
+            </tr>
+            <tr class="w3-white">
+              <td>Agency 5</td>
+              <td>Team 1</td>
+              <td>6</td>
+            </tr>
+            <tr class="w3-hide-medium">
+              <td>Agency 6</td>
+              <td>Team 1</td>
+              <td>4</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div style="background-color: black; color: white; padding-left: 1cm;">
+  <br>
+  <center><h1>What are the rules?</h1></center>
+  <h3>To ensure a collaborative and reciprocal environment, our platform operates under a single guiding principle:</h3>
+  <h1><center>Visibility is earned through contribution.</center></h1></li>
+  <h4><li>You will gain access to view others' tasks only when you share your own.</h4></li>
+  <h4><li>The extent of your access correlates directly with your level of activity; frequent contributions will unlock comprehensive visibility across all agency's tasks. </li>
+  <h4><li>So engage actively and unlock the full potential of our database.</li></h4>
+  <br>
+</div>
+<br>
+<!-- Second Grid: Work & Resume -->
+<div class="w3-row">
+  <div class="w3-half w3-teal" style="min-height:800px" id="work">
+    <div class="w3-padding-64">
+      <h2><center>Submit Your Tasks</center></h2>
+      <h4><center>Contribute to the community by submitting your tasks below:</center> </h4>
+    </div>
+    <div class="form-container">
+      <form action="/submit-task" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+  
+          <label for="agency">Agency:</label>
+          <input type="text" id="agency" name="agency" required>
+  
+          <label for="teamName">Team Name:</label>
+          <input type="text" id="teamName" name="teamName" required>
+  
+          <label for="taskDescription">Task Description:</label>
+          <textarea id="taskDescription" name="taskDescription" rows="4" required></textarea>
+  
+          <input type="submit" value="Submit">
+      </form>
+  </div>
+  </div>
+  <div class="w3-half w3-indigo w3-container" style="min-height:800px">
+    <div class="w3-padding-64">
+      <center><h2>Browse Other Agency's Tasks</h2></center>
+      <h4>Search to find public officers based on their current & past projects</h4>
+      <br>
+    <center><form action="/search-results" method="get" class="search-form">
+        <input type="text" name="project_keyword" placeholder="Enter project keyword" required>
+        <br>
+        <p style="color:black">OR</p>
+        <input type="text" name="agency_name" placeholder="Search by agency name" required>
+        <br>
+        <br>
+        <input type="submit" value="Search">
+    </form></center>
+    <br>
+    <center><h3> Or search the most popular keywords:</h3></center>
+    <Center><div class="button-container">
+      <div>
+          <button type="button">AI Incubation</button>
+          <button type="button">Healthcare</button>
+          <button type="button">Public Safety</button>
+      </div>
+      <div>
+          <button type="button">Transport</button>
+          <button type="button">Emergency Response</button>
+          <button type="button">Economic Development Programs</button>
+     </div></center>
+  </div>
+    </div>
+  </div>
+</div>
+
+<!-- Third Grid: Swing By & Contact -->
+<div class="w3-row">
+    <div class="w3-half w3-black w3-container w3-center" style="height:700px">
+      <div class="w3-padding-64">
+        <h1>About The Creator</h1>
+        <p>Shikhar is a public officer in the National AI Group (Government & Governance team.</p>
+        <img src="https://media.licdn.com/dms/image/C5603AQFkoIZE5yPeTA/profile-displayphoto-shrink_200_200/0/1607378302445?e=2147483647&v=beta&t=GiUbChQFsuPmmsfO_YAfzdLqnt_StkGCw1eVHw-9Oq4" class="w3-margin w3-circle" alt="Person" style="width:40%">
+      </div>
+      <div class="w3-padding-64">
+        <a href="https://shikhar.framer.ai" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">Visit Shikhar's Website</a>
+      </div>
+</div>
+  <div class="w3-half w3-teal w3-container" style="height:700px">
+    <div class="w3-padding-64 w3-padding-large">
+      <h1>Questions & Feature Requests</h1>
+      <p>Let us know about any feature requests or improvements we can make this app through the form below.</p>
+      <form class="w3-container w3-card w3-padding-32 w3-white" action="/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input" style="width:100%;" type="text" required name="Name">
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input" style="width:100%;" type="text" required name="Email">
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input" style="width:100%;" type="text" required name="Message">
+        </div>
+        <button type="submit" class="w3-button w3-teal w3-right">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-white w3-padding-16">
+  <p>C: <a href="https://shikhar.framer.ai" target="_blank">Shikhar Kapoor</a></p>
+</footer>
+
+</body>
+</html>
