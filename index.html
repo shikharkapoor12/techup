@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,10 +7,81 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script>function showThankYouMessage() {
-  alert("Thank you for contributing to the community");
-  return true; // Continue with form submission
-}</script>
+  alert("Thank you for contributing to the community!");
+  return true;
+}
+function handleClick() {
+           // Create a new table element
+           var table = document.createElement("table");
+            table.border = "1"; // Add a border for visibility
+
+            // Create table header (thead)
+            var thead = document.createElement("thead");
+            var headerRow = document.createElement("tr");
+            var headers = ["Name", "Agency", "Task Title", "Task Description"]; // Specify column headers
+            headers.forEach(function(headerText) {
+                var th = document.createElement("th");
+                th.textContent = headerText;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            // Create table body (tbody) with sample data
+            var tbody = document.createElement("tbody");
+            var data = [
+                ["Shikhar", "SNG", "AI Incubation", "Develop a programme to help agencies incubate product ideas."],
+                
+            ];
+            data.forEach(function(rowData) {
+                var row = document.createElement("tr");
+                rowData.forEach(function(cellData) {
+                    var td = document.createElement("td");
+                    td.textContent = cellData;
+                    row.appendChild(td);
+                });
+                tbody.appendChild(row);
+            });
+            table.appendChild(tbody);
+
+            // Get the div container where the table will be added
+            var divContainer = document.getElementById("tableContainer");
+            // Clear any existing content in the div
+            divContainer.innerHTML = "";
+            // Append the table to the div
+            divContainer.appendChild(table);
+            
+        }
+</script>
 <style>
+/*TableContainer*/
+#tableContainer {
+  table {
+            width: 90%; /* Set the width of the table */
+            margin: 20px auto; /* Centering the table */
+            border-collapse: collapse; /* Collapses the border */
+        }
+
+        /* Styling for table headers and cells */
+        th, td {
+            padding: 8px; /* Padding inside cells */
+            text-align: left; /* Align text to the left */
+            border-bottom: 1px solid #ddd; /* Light grey border for each cell */
+        }
+
+        /* Header-specific styling */
+        th {
+            background-color: #4CAF50; /* Green background for headers */
+            color: white; /* White text for headers */
+            text-align: center;
+        }
+        td {
+          background-color: #ddd;
+          color: black;
+        }
+      
+        }
+
   /* Styling for the form and inputs */
   .search-form {
       margin: 20px;
@@ -181,7 +253,7 @@
       <h4><center>Contribute to the community by submitting your tasks below:</center> </h4>
     </div>
     <div class="form-container">
-      <form action="/submit-task" method="post" onsubmit="return showThankYouMessage();">
+      <form onsubmit="return showThankYouMessage();">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required>
   
@@ -216,7 +288,7 @@
     <center><h3> Or search the most popular keywords:</h3></center>
     <Center><div class="button-container">
       <div>
-          <button type="button">AI Incubation</button>
+          <button onclick="handleClick()" type="button">AI Incubation</button>
           <button type="button">Healthcare</button>
           <button type="button">Public Safety</button>
       </div>
@@ -225,6 +297,7 @@
           <button type="button">Emergency Response</button>
           <button type="button">Economic Development Programs</button>
      </div></center>
+    <div id="tableContainer"></div>
   </div>
     </div>
   </div>
@@ -244,7 +317,7 @@
 </div>
   <div class="w3-half w3-teal w3-container" style="height:700px">
     <div class="w3-padding-64 w3-padding-large">
-      <h1>Questions & Feature Requests</h1>
+      <center><h1>Questions & Feature Requests</h1></center>
       <p>Let us know about any feature requests or improvements we can make this app through the form below.</p>
       <form class="w3-container w3-card w3-padding-32 w3-white" action="/action_page.php" target="_blank">
         <div class="w3-section">
